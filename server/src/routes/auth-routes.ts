@@ -22,7 +22,7 @@ export const login = async (req: Request, res: Response) => {
     return res.sendStatus(401),json({message: 'Authentication failed'});
   }
 
-  const secretKey = process.env.JWT_SECRET_KEY || 'AAAAAAAAAAAAA';
+  const secretKey = process.env.JWT_SECRET_KEY || 'AAAAAAGGGHH';
 
   const token = jwt.sign({ username }, secretKey, { expiresIn: '3h' });
   return res.json({ token });
